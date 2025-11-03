@@ -120,7 +120,7 @@ export class AccountVendVpcPipelineStack extends cdk.Stack {
             buildSpec: codeBuild.BuildSpec.fromObject({
                 version: '0.2',
                 phases: {
-                    installCommands: installCommands ? { commands: installCommands} : undefined,
+                    install: installCommands ? { commands: installCommands} : undefined,
                     build: {
                         commands: buildCommands,
                     },
